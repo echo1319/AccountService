@@ -28,6 +28,4 @@ public class RegisterEndpoint {
         response.setUser(userRepository.registerUser(request.getUser()));
         return response;
     }
-
-
 }

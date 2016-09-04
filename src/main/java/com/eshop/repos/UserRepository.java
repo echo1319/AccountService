@@ -3,12 +3,10 @@ package com.eshop.repos;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import shopeeng.account.User;
 
 import javax.annotation.PostConstruct;
-import java.util.List;
 
 @Repository
 public class UserRepository {
@@ -36,6 +34,7 @@ public class UserRepository {
         if (jdbctemplate.update(sql, new Object[]{user.getUsername(), user.getPassword(), user.getName(), user.getLastname()}) > 0) {
             return user;
         }
+
         return null;
     }
 }
