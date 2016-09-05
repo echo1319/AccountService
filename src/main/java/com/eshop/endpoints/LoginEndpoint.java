@@ -24,7 +24,7 @@ public class LoginEndpoint {
     @ResponsePayload
     public LoginResponse login(@RequestPayload LoginRequest request) {
         LoginResponse response = new LoginResponse();
-        response.setUser(userRepository.loginUser(request.getUsername(), request.getPassword()));
+        response.setUser(userRepository.loginUser(request.getLogin().getUsername(), request.getLogin().getPassword()));
         return response;
     }
 

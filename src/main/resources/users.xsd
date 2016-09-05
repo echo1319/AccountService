@@ -4,8 +4,7 @@
     <xs:element name="loginRequest">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="username" type="xs:string"/>
-                <xs:element name="password" type="xs:string"/>
+                <xs:element name="login" type="tns:login"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -37,8 +36,15 @@
 
     <xs:complexType name="user">
         <xs:sequence>
+            <xs:element name="username" type="xs:string"/>
+            <xs:element name="password" type="xs:string"/>
             <xs:element name="name" type="xs:string"/>
             <xs:element name="lastname" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="login">
+        <xs:sequence>
             <xs:element name="username" type="xs:string"/>
             <xs:element name="password" type="xs:string"/>
         </xs:sequence>
