@@ -1,3 +1,4 @@
+/*
 package com.eshop;
 
 import com.eshop.config.WebServiceConfig;
@@ -18,7 +19,8 @@ public class WebAppInitializer implements WebApplicationInitializer {
         servlet.setApplicationContext(ctx);
         servlet.setTransformWsdlLocations(true);
         Dynamic dynamic = servletContext.addServlet("dispatcher", servlet);
-        dynamic.addMapping("/ws/*");
+        dynamic.addMapping("/ws");
         dynamic.setLoadOnStartup(1);
     }
 }
+*/
